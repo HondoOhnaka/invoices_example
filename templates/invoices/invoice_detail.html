@@ -1,0 +1,13 @@
+
+{% block content %}
+{% if invoice %}
+	<h3>Invoice</h3>
+	<a href="{% url 'invoice_detail' invoice.id %}">{{ invoice.id }}</a>
+	<br />
+	User: {{ invoice.user.username }} <br>
+	Amount: {{ invoice.amount }} <br>
+	Due: {{ invoice.due_date }}<br>
+{% else %}
+No results.
+{% endif %}
+{% endblock content %}
