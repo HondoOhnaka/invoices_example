@@ -6,7 +6,7 @@
 {% endif %}
 {% for invoice in invoice_list %}
 {% if invoice %}
-<li><a href="{% url 'invoice_detail' invoice.id %}">{{ invoice.id }}</a> User: {{ invoice.user.username }}  Amount: {{ invoice.amount }} Due: {{ invoice.due_date }}</li>
+<li><a href="{% url 'invoice_detail' invoice.id %}">{{ invoice.number }}</a> User: {{ invoice.user.username }}  Amount: {{ invoice.amount }} Due: {{ invoice.due_date }}</li>
 {% else %}
 No items were found.
 {% endif %}
