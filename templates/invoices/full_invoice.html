@@ -8,6 +8,18 @@
 	Client: {{ invoice.invoice_for.username }}<br>
 	Amount: {{ invoice.amount }} <br>
 	Due: {{ invoice.due_date }}<br>
+
+	<ol>
+	{% for item in invoice.items.all %}
+		<li>{{ item }} >> {{ item.item_group.identifier }}
+			<ul>
+			{% for line_item in item.line_items.all  %}
+				<li>{{ line_item.item_type.name }}: {{ line_item.description }} - {{ line_item.amount }}j</li>
+			{% endfor %}
+			</ul>
+		</li>
+	{% endfor %}
+	</ol>
 {% else %}
 No results.
 {% endif %}

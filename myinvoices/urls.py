@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include, url
-from .views import MyInvoiceListView, MyInvoiceDetailView
+from .views import MyInvoiceListView, MyInvoiceDetailView, full_invoice
 
 urlpatterns = patterns('',
 
@@ -11,4 +11,8 @@ urlpatterns = patterns('',
 		MyInvoiceDetailView.as_view(
 			template_name="invoices/invoice_detail.html"),
 		name="invoice_detail"),
+
+	url(r'^(?P<pk>\d+)/full/$',
+		full_invoice,
+		name="full_invoice"),
 )
