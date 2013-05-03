@@ -1,0 +1,273 @@
+- fields: {app_label: auth, model: permission, name: permission}
+  model: contenttypes.contenttype
+  pk: 1
+- fields: {app_label: auth, model: group, name: group}
+  model: contenttypes.contenttype
+  pk: 2
+- fields: {app_label: auth, model: user, name: user}
+  model: contenttypes.contenttype
+  pk: 3
+- fields: {app_label: contenttypes, model: contenttype, name: content type}
+  model: contenttypes.contenttype
+  pk: 4
+- fields: {app_label: sessions, model: session, name: session}
+  model: contenttypes.contenttype
+  pk: 5
+- fields: {app_label: sites, model: site, name: site}
+  model: contenttypes.contenttype
+  pk: 6
+- fields: {app_label: invoices, model: invoice, name: invoice}
+  model: contenttypes.contenttype
+  pk: 7
+- fields: {app_label: invoices, model: lineitemtype, name: line item type}
+  model: contenttypes.contenttype
+  pk: 8
+- fields: {app_label: invoices, model: lineitem, name: line item}
+  model: contenttypes.contenttype
+  pk: 9
+- fields: {app_label: admin, model: logentry, name: log entry}
+  model: contenttypes.contenttype
+  pk: 10
+- fields: {expire_date: !!timestamp '2013-05-17 21:29:10.890885+00:00', session_data: NGEzZjVlNjNjNjg5MzVlNzAyMTc3MjY4ZTFlYzdkODljZmY3Y2EzZDqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu}
+  model: sessions.session
+  pk: kf42syq2uzv5nlmd95o2fthmypdtadug
+- fields: {domain: example.com, name: example.com}
+  model: sites.site
+  pk: 1
+- fields: {date: !!timestamp '2013-05-03 20:38:24+00:00', description: Session 1,
+    invoice: 3, item_type: 1, quantity: 1}
+  model: invoices.lineitem
+  pk: 1
+- fields: {date: !!timestamp '2013-05-03 20:38:36+00:00', description: two sessions,
+    invoice: 3, item_type: 2, quantity: 2}
+  model: invoices.lineitem
+  pk: 2
+- fields: {date: !!timestamp '2013-05-03 20:38:49+00:00', description: one session
+      60, invoice: 1, item_type: 2, quantity: 1}
+  model: invoices.lineitem
+  pk: 3
+- fields: {codename: add_permission, content_type: 1, name: Can add permission}
+  model: auth.permission
+  pk: 1
+- fields: {codename: change_permission, content_type: 1, name: Can change permission}
+  model: auth.permission
+  pk: 2
+- fields: {codename: delete_permission, content_type: 1, name: Can delete permission}
+  model: auth.permission
+  pk: 3
+- fields: {codename: add_group, content_type: 2, name: Can add group}
+  model: auth.permission
+  pk: 4
+- fields: {codename: change_group, content_type: 2, name: Can change group}
+  model: auth.permission
+  pk: 5
+- fields: {codename: delete_group, content_type: 2, name: Can delete group}
+  model: auth.permission
+  pk: 6
+- fields: {codename: add_user, content_type: 3, name: Can add user}
+  model: auth.permission
+  pk: 7
+- fields: {codename: change_user, content_type: 3, name: Can change user}
+  model: auth.permission
+  pk: 8
+- fields: {codename: delete_user, content_type: 3, name: Can delete user}
+  model: auth.permission
+  pk: 9
+- fields: {codename: add_contenttype, content_type: 4, name: Can add content type}
+  model: auth.permission
+  pk: 10
+- fields: {codename: change_contenttype, content_type: 4, name: Can change content
+      type}
+  model: auth.permission
+  pk: 11
+- fields: {codename: delete_contenttype, content_type: 4, name: Can delete content
+      type}
+  model: auth.permission
+  pk: 12
+- fields: {codename: add_session, content_type: 5, name: Can add session}
+  model: auth.permission
+  pk: 13
+- fields: {codename: change_session, content_type: 5, name: Can change session}
+  model: auth.permission
+  pk: 14
+- fields: {codename: delete_session, content_type: 5, name: Can delete session}
+  model: auth.permission
+  pk: 15
+- fields: {codename: add_site, content_type: 6, name: Can add site}
+  model: auth.permission
+  pk: 16
+- fields: {codename: change_site, content_type: 6, name: Can change site}
+  model: auth.permission
+  pk: 17
+- fields: {codename: delete_site, content_type: 6, name: Can delete site}
+  model: auth.permission
+  pk: 18
+- fields: {codename: add_invoice, content_type: 7, name: Can add invoice}
+  model: auth.permission
+  pk: 19
+- fields: {codename: change_invoice, content_type: 7, name: Can change invoice}
+  model: auth.permission
+  pk: 20
+- fields: {codename: delete_invoice, content_type: 7, name: Can delete invoice}
+  model: auth.permission
+  pk: 21
+- fields: {codename: add_lineitemtype, content_type: 8, name: Can add line item type}
+  model: auth.permission
+  pk: 22
+- fields: {codename: change_lineitemtype, content_type: 8, name: Can change line item
+      type}
+  model: auth.permission
+  pk: 23
+- fields: {codename: delete_lineitemtype, content_type: 8, name: Can delete line item
+      type}
+  model: auth.permission
+  pk: 24
+- fields: {codename: add_lineitem, content_type: 9, name: Can add line item}
+  model: auth.permission
+  pk: 25
+- fields: {codename: change_lineitem, content_type: 9, name: Can change line item}
+  model: auth.permission
+  pk: 26
+- fields: {codename: delete_lineitem, content_type: 9, name: Can delete line item}
+  model: auth.permission
+  pk: 27
+- fields: {codename: add_logentry, content_type: 10, name: Can add log entry}
+  model: auth.permission
+  pk: 28
+- fields: {codename: change_logentry, content_type: 10, name: Can change log entry}
+  model: auth.permission
+  pk: 29
+- fields: {codename: delete_logentry, content_type: 10, name: Can delete log entry}
+  model: auth.permission
+  pk: 30
+- fields:
+    date_joined: 2013-05-03 21:28:58.610658+00:00
+    email: admin@admin.com
+    first_name: ''
+    groups: []
+    is_active: true
+    is_staff: true
+    is_superuser: true
+    last_login: 2013-05-03 21:29:10.888915+00:00
+    last_name: ''
+    password: pbkdf2_sha256$10000$eUHJaLltLIOL$RUyjjTLH9kFMluP0Yy1xcXvMGCoKpJn4e4DVSebwcPI=
+    user_permissions: []
+    username: admin
+  model: auth.user
+  pk: 1
+- fields:
+    date_joined: 2013-05-03 21:29:47.672500+00:00
+    email: test
+    first_name: ''
+    groups: []
+    is_active: true
+    is_staff: false
+    is_superuser: false
+    last_login: 2013-05-03 21:29:47.672500+00:00
+    last_name: ''
+    password: '!'
+    user_permissions: []
+    username: coach
+  model: auth.user
+  pk: 2
+- fields:
+    date_joined: 2013-05-03 21:29:52.397365+00:00
+    email: test
+    first_name: ''
+    groups: []
+    is_active: true
+    is_staff: false
+    is_superuser: false
+    last_login: 2013-05-03 21:29:52.397365+00:00
+    last_name: ''
+    password: '!'
+    user_permissions: []
+    username: jim
+  model: auth.user
+  pk: 3
+- fields:
+    date_joined: 2013-05-03 21:29:55.783566+00:00
+    email: test
+    first_name: ''
+    groups: []
+    is_active: true
+    is_staff: false
+    is_superuser: false
+    last_login: 2013-05-03 21:29:55.783566+00:00
+    last_name: ''
+    password: '!'
+    user_permissions: []
+    username: joe
+  model: auth.user
+  pk: 4
+- fields: {amount: '0', begins: 2013-05-03, cancels: null, client: 3, coach: 2, count: 1,
+    created: !!timestamp '2013-05-03 21:37:30.678109+00:00', currency: EUR, due_date: 2013-05-23,
+    ends: 2013-05-03, is_paid: false, total_amount: '0', updated: !!timestamp '2013-05-03
+      21:37:30.678138+00:00', vat: 19, vat_amount: '0'}
+  model: invoices.invoice
+  pk: 1
+- fields: {amount: '0', begins: 2013-05-03, cancels: null, client: 4, coach: 2, count: 1,
+    created: !!timestamp '2013-05-03 21:37:42.343074+00:00', currency: EUR, due_date: 2013-05-03,
+    ends: 2013-05-03, is_paid: false, total_amount: '0', updated: !!timestamp '2013-05-03
+      21:37:42.343112+00:00', vat: 19, vat_amount: '0'}
+  model: invoices.invoice
+  pk: 2
+- fields: {amount: '0', begins: 2013-05-03, cancels: null, client: 3, coach: 2, count: 2,
+    created: !!timestamp '2013-05-03 21:38:03.088314+00:00', currency: EUR, due_date: 2013-05-10,
+    ends: 2013-05-10, is_paid: false, total_amount: '0', updated: !!timestamp '2013-05-03
+      21:38:03.088344+00:00', vat: 19, vat_amount: '0'}
+  model: invoices.invoice
+  pk: 3
+- fields: {amount: '29.99', coach: 1, description: A 30 minute session, identifier: session30,
+    name: 30 Minutes}
+  model: invoices.lineitemtype
+  pk: 1
+- fields: {amount: '59.99', coach: 2, description: A 60 Minute session, identifier: session60,
+    name: 60 Minutes Session}
+  model: invoices.lineitemtype
+  pk: 2
+- fields: {amount: '89.99', coach: 1, description: A 90 minute therapy session, identifier: session90,
+    name: 90 Minute Session}
+  model: invoices.lineitemtype
+  pk: 3
+- fields: {action_flag: 1, action_time: !!timestamp '2013-05-03 21:30:35.891693+00:00',
+    change_message: '', content_type: 8, object_id: '1', object_repr: session30, user: 1}
+  model: admin.logentry
+  pk: 1
+- fields: {action_flag: 1, action_time: !!timestamp '2013-05-03 21:30:51.691448+00:00',
+    change_message: '', content_type: 8, object_id: '2', object_repr: session60, user: 1}
+  model: admin.logentry
+  pk: 2
+- fields: {action_flag: 1, action_time: !!timestamp '2013-05-03 21:31:10.036606+00:00',
+    change_message: '', content_type: 8, object_id: '3', object_repr: session90, user: 1}
+  model: admin.logentry
+  pk: 3
+- fields: {action_flag: 1, action_time: !!timestamp '2013-05-03 21:37:30.680388+00:00',
+    change_message: '', content_type: 7, object_id: '1', object_repr: 'coach, 2013-05-03
+      - 2013-05-03', user: 1}
+  model: admin.logentry
+  pk: 4
+- fields: {action_flag: 1, action_time: !!timestamp '2013-05-03 21:37:42.344073+00:00',
+    change_message: '', content_type: 7, object_id: '2', object_repr: 'coach, 2013-05-03
+      - 2013-05-03', user: 1}
+  model: admin.logentry
+  pk: 5
+- fields: {action_flag: 1, action_time: !!timestamp '2013-05-03 21:38:03.089294+00:00',
+    change_message: '', content_type: 7, object_id: '3', object_repr: 'coach, 2013-05-03
+      - 2013-05-10', user: 1}
+  model: admin.logentry
+  pk: 6
+- fields: {action_flag: 1, action_time: !!timestamp '2013-05-03 21:38:26.293919+00:00',
+    change_message: '', content_type: 9, object_id: '1', object_repr: Session 1, user: 1}
+  model: admin.logentry
+  pk: 7
+- fields: {action_flag: 1, action_time: !!timestamp '2013-05-03 21:38:37.500362+00:00',
+    change_message: '', content_type: 9, object_id: '2', object_repr: two sessions,
+    user: 1}
+  model: admin.logentry
+  pk: 8
+- fields: {action_flag: 1, action_time: !!timestamp '2013-05-03 21:38:51.091032+00:00',
+    change_message: '', content_type: 9, object_id: '3', object_repr: one session
+      60, user: 1}
+  model: admin.logentry
+  pk: 9

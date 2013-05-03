@@ -13,36 +13,57 @@ th, td {
 {% endblock styleblock %}
 {% block content %}
 {% if invoice %}
+<h3>Invoice
+	<a href="{% url 'invoice_detail' invoice.id %}">{{ invoice.id }}</a>
+</h3>
+
+<div><h3>From: Coach {{ invoice.user.username }}</h3></div>
+
 <table>
 	<tr>
-		<th colspan="4">
-		<h3>Invoice
-			<a href="{% url 'invoice_detail' invoice.id %}">{{ invoice.id }}</a>
-		</h3>
-		</th>
+		<th><h5>Bill To:</h5></th>
 	</tr>
 	<tr>
-		<th>Coach: {{ invoice.user.username }}</th>
-		<th>Client: {{ invoice.invoice_for.username }}</th>
-		<th>Amount: {{ invoice.amount }}</th>
-		<th>Due: {{ invoice.due_date }}</th>
+		<td>Client: {{ invoice.invoice_for.username }}</td>
 	</tr>
+</table>
+
+<table>
+<tr>
+	<th>Invoice #</th>
+	<th>Period</th>
+	<th>Due By</th>
+</tr>
+<tr>
+	<td>{{ invoice.number }}</td>
+	<td>{{ invoice.begins }} to {{ invoice.ends }}</td>
+	<td>{{ invoice.due_date }}</td>
+</tr>
+</table>
+<table>
 	<tr>
-		
-	{% for item in invoice.items.all %}
-		<td colspan="4">GROUP: {{ item }} >> {{ item.description }}</td>
+	<th>Code</th>
+	<th>Description</th>
+	<th>Qty</th>
+	<th>Price</th>
+	<th>Line Total</th>
+	</tr>
+{% for item in invoice.line_items.all %}
 	<tr>
-		<td colspan='4'>
-			<ul>
-			{% for line_item in item.line_items.all  %}
-				<li>Date: {{ line_item.date|date:"m d Y" }}</li>
-				<li>{{ line_item.item_group.item_type.name }}: {{ line_item.description }} - {{ line_item.amount }}</li>
-			{% endfor %}
-			</ul>
-		</td>
-	</tr>
-	{% endfor %}
-	</tr>
+		<td>{{ item.item_type.identifier }}</td>
+		<td>{{ item.description }}</td>
+		<td>{{ item.quantity }}</td>
+		<td>{{ item.item_type.amount }}</td>
+		<td>{{ item.subtotal }}</td>
+	</tr>	
+{% endfor %}
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>{{ invoice.total }}</td>
+</tr>	
 </table>
 {% else %}
 No results.
