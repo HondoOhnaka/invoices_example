@@ -1,26 +1,51 @@
 {% extends "base.html" %}
+{% block styleblock %}
+<style type="text/css">
+table {
+	border:1px solid blue;
+}
+tr { border: 1px solid red;}
+th, td {
+	border:2px solid green;
+}
+
+</style>
+{% endblock styleblock %}
 {% block content %}
 {% if invoice %}
-	<h3>Invoice
-		<a href="{% url 'invoice_detail' invoice.id %}">{{ invoice.id }}</a>
-	</h3>
-	Coach: {{ invoice.user.username }} <br>
-	Client: {{ invoice.invoice_for.username }}<br>
-	Amount: {{ invoice.amount }} <br>
-	Due: {{ invoice.due_date }}<br>
-
-	<ol>
+<table>
+	<tr>
+		<th colspan="4">
+		<h3>Invoice
+			<a href="{% url 'invoice_detail' invoice.id %}">{{ invoice.id }}</a>
+		</h3>
+		</th>
+	</tr>
+	<tr>
+		<th>Coach: {{ invoice.user.username }}</th>
+		<th>Client: {{ invoice.invoice_for.username }}</th>
+		<th>Amount: {{ invoice.amount }}</th>
+		<th>Due: {{ invoice.due_date }}</th>
+	</tr>
+	<tr>
+		
 	{% for item in invoice.items.all %}
-		<li>{{ item }} >> {{ item.item_group.identifier }}
+		<td colspan="4">GROUP: {{ item }} >> {{ item.description }}</td>
+	<tr>
+		<td colspan='4'>
 			<ul>
 			{% for line_item in item.line_items.all  %}
-				<li>{{ line_item.item_type.name }}: {{ line_item.description }} - {{ line_item.amount }}j</li>
+				<li>Date: {{ line_item.date|date:"m d Y" }}</li>
+				<li>{{ line_item.item_group.item_type.name }}: {{ line_item.description }} - {{ line_item.amount }}</li>
 			{% endfor %}
 			</ul>
-		</li>
+		</td>
+	</tr>
 	{% endfor %}
-	</ol>
+	</tr>
+</table>
 {% else %}
 No results.
 {% endif %}
+
 {% endblock content %}
