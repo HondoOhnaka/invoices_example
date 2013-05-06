@@ -200,19 +200,19 @@
     username: joe
   model: auth.user
   pk: 4
-- fields: {amount: '0', begins: 2013-05-03, cancels: null, client: 3, coach: 2, count: 1,
+- fields: {amount: '0', begins: 2013-05-03, cancels: null, client: 3, coach: 2,
     created: !!timestamp '2013-05-03 21:37:30.678109+00:00', currency: EUR, due_date: 2013-05-23,
     ends: 2013-05-03, is_paid: false, total_amount: '0', updated: !!timestamp '2013-05-03
       21:37:30.678138+00:00', vat: 19, vat_amount: '0'}
   model: invoices.invoice
   pk: 1
-- fields: {amount: '0', begins: 2013-05-03, cancels: null, client: 4, coach: 2, count: 1,
+- fields: {amount: '0', begins: 2013-05-03, cancels: null, client: 4, coach: 2,
     created: !!timestamp '2013-05-03 21:37:42.343074+00:00', currency: EUR, due_date: 2013-05-03,
     ends: 2013-05-03, is_paid: false, total_amount: '0', updated: !!timestamp '2013-05-03
       21:37:42.343112+00:00', vat: 19, vat_amount: '0'}
   model: invoices.invoice
   pk: 2
-- fields: {amount: '0', begins: 2013-05-03, cancels: null, client: 3, coach: 2, count: 2,
+- fields: {amount: '0', begins: 2013-05-03, cancels: null, client: 3, coach: 2,
     created: !!timestamp '2013-05-03 21:38:03.088314+00:00', currency: EUR, due_date: 2013-05-10,
     ends: 2013-05-10, is_paid: false, total_amount: '0', updated: !!timestamp '2013-05-03
       21:38:03.088344+00:00', vat: 19, vat_amount: '0'}

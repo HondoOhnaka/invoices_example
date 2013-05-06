@@ -1,11 +1,11 @@
-{% extends "base.html" %}
+{% extends "invoices/invoices_base.html" %}
 {% block content %}
 {% if invoice %}
 	<h3>Invoice
-		<a href="{% url 'invoice_detail' invoice.id %}">{{ invoice.id }}</a>
+		<a href="{% url 'invoice_detail' invoice.id %}">{{ invoice.number|upper }}</a>
 	</h3>
-	Coach: {{ invoice.user.username }} <br>
-	Client: {{ invoice.invoice_for.username }}<br>
+	Coach: {{ invoice.coach.username }} <br>
+	Client: {{ invoice.client.username }}<br>
 	Amount: {{ invoice.amount }} <br>
 	Due: {{ invoice.due_date }}<br>
 {% else %}

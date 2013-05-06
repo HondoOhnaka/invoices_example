@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "invoices/invoices_base.html" %}
 {% block styleblock %}
 <style type="text/css">
 table {
@@ -14,17 +14,17 @@ th, td {
 {% block content %}
 {% if invoice %}
 <h3>Invoice
-	<a href="{% url 'invoice_detail' invoice.id %}">{{ invoice.id }}</a>
+	<a href="{% url 'invoice_detail' invoice.id %}">{{ invoice.number }}</a>
 </h3>
 
-<div><h3>From: Coach {{ invoice.user.username }}</h3></div>
+<div><h3>From: Coach {{ invoice.coach.username }}</h3></div>
 
 <table>
 	<tr>
 		<th><h5>Bill To:</h5></th>
 	</tr>
 	<tr>
-		<td>Client: {{ invoice.invoice_for.username }}</td>
+		<td>Client: {{ invoice.client.username }}</td>
 	</tr>
 </table>
 
